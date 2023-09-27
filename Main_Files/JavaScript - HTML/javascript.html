@@ -13,6 +13,55 @@
     <p> <b>What does this page covers ?</b> </p>
     <p> This page covers my work/practices through my time of studies, this represent brief idea about the skill set I have developed during my journey of College/studies, and also gives an idea on how I have solve problems during my time of practice and learning </p>
     <p> I have used various different methods for HTML and JavaScript to create such a project it also includes DOM method, Object Oriented Programming, forms etc. </p>
+
+    <h2> Questions are starting from below </h2>
+
+
+        <!--
+            Starting question 1
+        -->
+    <form id="question1" action="javascript:question1()">
+        <label><b><u>Question No.1</u></b></label><br><br>
+        <label> Write a JavaScript function that iterates through an array of numbers and returns the sum of all even numbers in the array.</label><br><br>
+        <label> Do You want to test your own numbers or do you want system to create numbers and process test </label><br>
+        <label> <b>(By default System will generate numbers for you.)</b> </label><br><br>
+        <input type="radio" id="Yes" name="Choice" value="Yes">
+        <label for="Yes"> I will manually input Numbers </label><br>
+        <input type="radio" id="No" name="Choice" value="No" checked>
+        <label for="No"> Let system generate Numbers </label><br><br>
+
+        <!--
+            Edit in Javascript if user selects "I will manually input Numbers"
+            It should give one more label "Enter your Numbers"
+        -->
+        <label> How many numbers you want to check? (By default it is set to 10)</label><br>
+        <input name="numberGenerator" id="numberGenerator" type="text" value="10" /> <br><br>
+
+        <!--
+            If user selects "I will manually input Numbers"
+            It should grey out the box
+        -->
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <div id="requestQuestion_1">
+        <!--
+            Display results for Question 1 here
+        -->
+    </div>
+
+
+    <div id="Question_2"></div>
+    <div id="Question_3"></div>
+    <div id="Question_4"></div>
+    <div id="Question_5"></div>
+    <div id="Question_6"></div>
+    <div id="Question_7"></div>
+    <div id="Question_8"></div>
+
+
     
     <script src="../JavaScripts/RegularPractices/Question_1.js"></script>
     <script src="../JavaScripts/RegularPractices/Question_2.js"></script>
