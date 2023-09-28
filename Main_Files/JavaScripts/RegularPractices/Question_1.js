@@ -74,7 +74,7 @@ function question_1(){
             randomNum.push(Math.floor(Math.random()* (Number(range) + 1)));
         }
 
-        answer1.innerHTML += `<br>The numbers that are created according to the request are as follows: s<br>`;
+        answer1.innerHTML += `<br>The numbers that are created according to the request are as follows: <br>`;
 
         console.log(randomNum);
 
