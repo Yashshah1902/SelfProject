@@ -20,31 +20,27 @@
         <!--
             Starting question 1
         -->
-    <form id="question1" action="javascript:question1()">
+    <form id="question1">
         <label><b><u>Question No.1</u></b></label><br><br>
         <label> Write a JavaScript function that iterates through an array of numbers and returns the sum of all even numbers in the array.</label><br><br>
-        <label> Do You want to test your own numbers or do you want system to create numbers and process test </label><br>
-        <label> <b>(By default System will generate numbers for you.)</b> </label><br><br>
-        <input type="radio" id="Yes" name="Choice" value="Yes">
-        <label for="Yes"> I will manually input Numbers </label><br>
-        <input type="radio" id="No" name="Choice" value="No" checked>
-        <label for="No"> Let system generate Numbers </label><br><br>
+        <label> Enter the number of integers you want to generate it will be random numbers </label><br>
+        <input type="number" id="amount" name="amount"/><br><br>
+        <label> Enter the range for numbers. </label><br>
+        <input type="number" id="range" name="range"/><br><br>
 
         <!--
             Edit in Javascript if user selects "I will manually input Numbers"
             It should give one more label "Enter your Numbers"
         -->
-        <label> How many numbers you want to check? (By default it is set to 10)</label><br>
-        <input name="numberGenerator" id="numberGenerator" type="text" value="10" /> <br><br>
+        
 
         <!--
             If user selects "I will manually input Numbers"
             It should grey out the box
         -->
-
-        <input type="submit" value="Submit">
-
     </form>
+    <button type="button" onclick="question_1()"> Submit </button>
+
 
     <div id="requestQuestion_1">
         <!--
