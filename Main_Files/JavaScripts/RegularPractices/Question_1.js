@@ -1,6 +1,9 @@
 // Author: Yash Shah
 // Date: 20-09-2023
 
+// Button event listner
+document.getElementById("buttonNo1").addEventListener("click", () => buttonNo1.innerHTML = 'Submitted');
+
 function question_1(){
 
     // alert("question 1 submitted!")
@@ -13,8 +16,6 @@ function question_1(){
 
     // 2.) Check the value of id="range", .value
     let range = document.querySelector('#range').value;
-
-    
 
     // let answer1 = document.querySelector('#requestQuestion_1');
     // answer1.innerHTML = `${range}`; // Value Checked 
@@ -73,8 +74,9 @@ function question_1(){
                             <label> Please input the word or mini sentece you want to search </label><br>
                             <textarea rows="1" cols="50" id="wordArea" onclick="clearArea()">sun</textarea>
                             </form><br>
-                            <button class="button" type="button" onclick="question_2()"> Submit </button><br>`;
+                            <button id="buttonNo2" onclick="question_2()"> Submit </button><br>`;
     question2Div.innerHTML += `<div id="requestQuestion_2"></div>`;
+    question2Div.innerHTML += `<hr>`;
 
 })()
 
@@ -83,8 +85,11 @@ function clearArea(){
     document.getElementById("wordArea").value ="";
 }
 
+// button event listner
+document.getElementById("buttonNo2").addEventListener("click", () => buttonNo2.innerHTML = 'Submitted');
+
 function question_2(){
-    
+
     let answer2 = document.querySelector('#requestQuestion_2');
 
     let sentence = document.getElementById('sentenceArea');
