@@ -1,46 +1,6 @@
 // Author: Yash Shah
 // Date: 20-09-2023
 
-/*
-Write a JavaScript function that iterates through an array of numbers and returns the sum of all even numbers in the array.
-*/
-// alert(`Welcome to JavaScript Practice session!`);
-
-// (function(){
-//         function answer1(){
-
-//             // Code Below
-//             // Generate Numbers in an Array
-//             let randomNum = [];
-
-//             for(let i = 0; i < 10; i++){
-//                 randomNum.push(Math.floor(Math.random()*200));
-//             }
-
-//             console.log(randomNum);
-
-//             // Get function for calculating even number from array
-//             function evenNumCal(array){
-
-//             let sum = 0;
-
-//             for(let i = 0; i < array.length; i++){
-//                 if(array[i] % 2 === 0){
-//                     sum += array[i];
-//                 }
-//             }
-
-//             return sum;
-//     }
-
-//     console.log(evenNumCal(randomNum));
-//     }
-// })()
-
-/*
-Code with DOM
-*/
-
 function question_1(){
 
     // alert("question 1 submitted!")
@@ -83,12 +43,14 @@ function question_1(){
 
         // Sum of Even Numbers
         let sum = 0;
+        let count = 0;
         for(let x = 0; x < randomNum.length; x++){
             if(randomNum[x] % 2 === 0){
-                sum += randomNum[x]
+                sum += randomNum[x];
+                count++;
             }
         }
-
+        answer1.innerHTML += `<br> The total number of even Numbers is: <b><i>${count}</i></b>`;
         answer1.innerHTML += `<br> The sum of even Numbers for this randomly generated number is: <b><i>${sum}</i></b>`;
 
     }
@@ -96,3 +58,58 @@ function question_1(){
 
 
 }
+
+/* Question 2 */
+
+(function(){
+    let question2Div = document.querySelector('#Question_2');
+    question2Div.innerHTML += `<hr><h2> Word Finder Tool</h2>`;
+    question2Div.innerHTML += `<b><u>Question No.2: </u></b> </>`
+    question2Div.innerHTML += `This Program will search a word inside a sentence, you would have option to have your own sentence and search for the word or mini-sentence`;
+    question2Div.innerHTML += `<br> <b>"Let's have a search!!"</b> <br><br>`;
+    question2Div.innerHTML += ` <form id="question1">
+                            <label> Please input your sentence </label><br>
+                            <textarea rows="3" cols="100" id="sentenceArea" onclick="clearArea()">The sunsets by the beach are always breathtaking, painting the sky with vibrant shades of orange and pink.</textarea><br><br>
+                            <label> Please input the word or mini sentece you want to search </label><br>
+                            <textarea rows="1" cols="50" id="wordArea" onclick="clearArea()">sun</textarea>
+                            </form><br>
+                            <button class="button" type="button" onclick="question_2()"> Submit </button><br>`;
+    question2Div.innerHTML += `<div id="requestQuestion_2"></div>`;
+
+})()
+
+function clearArea(){
+    document.getElementById("sentenceArea").value = "";
+    document.getElementById("wordArea").value ="";
+}
+
+function question_2(){
+    
+    let answer2 = document.querySelector('#requestQuestion_2');
+
+    let sentence = document.getElementById('sentenceArea');
+    let sentenceValue = (sentence.value).toLowerCase();
+
+    // answer2.innerHTML = `This is the sentence Value ${sentenceValue}`
+    let word = document.getElementById('wordArea');
+    let wordValue = (word.value).toLowerCase();
+
+    // Process
+    function stringFinder(psentence, pword){
+        if(psentence.includes(pword) === true){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    if(stringFinder(sentenceValue,wordValue) === true){
+        answer2.innerHTML = `<br><b>Yes!</b> the word is present in the sentence`;
+    } else {
+        answer2.innerHTML = `<br><b>Opps!</b> Sorry not able find the word in the sentence`;
+    }
+
+    // answer2.innerHTML += `${stringFinder(sentenceValue, wordValue)}`;
+
+}
+
