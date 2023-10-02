@@ -1,4 +1,6 @@
+// Console Question - Output will be on Console
 /*
+Question 3:
 String Building: Write a JavaScript function that takes an array of words and constructs a sentence from them. The words should be separated by spaces, and the first letter of each word should be capitalized.
 */
 
@@ -7,6 +9,8 @@ String Building: Write a JavaScript function that takes an array of words and co
     function stringBuilder(array){
         // let joiningArray = array.join(" ");
         // return joiningArray;
+
+        console.log("Console Question 3: ")
 
         if (array.length === 0){
             return console.log(`Please input some words`);
@@ -43,4 +47,3 @@ String Building: Write a JavaScript function that takes an array of words and co
     */ 
 
 })()
-
