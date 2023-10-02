@@ -68,21 +68,38 @@ function question_1(){
     question2Div.innerHTML += `<b><u>Question No.2: </u></b> </>`
     question2Div.innerHTML += `This Program will search a word inside a sentence, you would have option to have your own sentence and search for the word or mini-sentence`;
     question2Div.innerHTML += `<br> <b>"Let's have a search!!"</b> <br><br>`;
-    question2Div.innerHTML += ` <form id="question1">
+    question2Div.innerHTML += ` 
+                            <form id="question2">
                             <label> Please input your sentence </label><br>
-                            <textarea rows="3" cols="100" id="sentenceArea" onclick="clearArea()">The sunsets by the beach are always breathtaking, painting the sky with vibrant shades of orange and pink.</textarea><br><br>
+                            <textarea rows="3" cols="100" id="sentenceArea" onclick="clearAreaSen()">The sunsets by the beach are always breathtaking, painting the sky with vibrant shades of orange and pink.</textarea><br><br>
                             <label> Please input the word or mini sentece you want to search </label><br>
-                            <textarea rows="1" cols="50" id="wordArea" onclick="clearArea()">sun</textarea>
+                            <textarea rows="1" cols="50" id="wordArea" onclick="clearAreaWord()">sun</textarea>
                             </form><br>
-                            <button id="buttonNo2" onclick="question_2()"> Submit </button><br>`;
+                            <button id="buttonNo2" onclick="question_2()"> Submit </button>
+                            <button id="reset" onclick="reset()"> Reset </button> <br>
+                            </form>
+                            `;
     question2Div.innerHTML += `<div id="requestQuestion_2"></div>`;
     question2Div.innerHTML += `<hr>`;
 
 })()
 
-function clearArea(){
+// Button and Area Functions
+
+function clearAreaSen(){
     document.getElementById("sentenceArea").value = "";
+}
+
+function clearAreaWord(){
     document.getElementById("wordArea").value ="";
+}
+
+function reset(){
+    const defaultSentence = `The sunsets by the beach are always breathtaking, painting the sky with vibrant shades of orange and pink.`;
+    const defaultWord = `sun`;
+
+    document.getElementById('sentenceArea').value = defaultSentence;
+    document.getElementById('wordArea').value= defaultWord;
 }
 
 // button event listner
@@ -173,5 +190,33 @@ Question 4:
 Write a JavaScript function that calculates the sum of all the numbers in an array.
 */
 
+/*
+Write a JavaScript function that calculates the sum of all the numbers in an array.
+*/
+
+// <div id="Question_4"></div>
+
+let question4Div = document.querySelector('#Question_4');
+question4Div.innerHTML = `<hr> <h2>Four operators Calculator (+, -, *, /)</h2>`;
+question4Div.innerHTML += `<b><u>Question No.4: </u></b> </>`;
+question4Div.innerHTML += `This Program will calculate the numbers received by you and also getting your input on what operation you want to do with those numbers and gives total value of the operation performed`;
+question4Div.innerHTML += `<br> <b>"Let's Begin!!"</b> <br><br>`;
+
+// 1. Please enter the numbers that user wants to calculate
+// 2. Please input the operation
+// 3. Please get the functions
+question4Div.innerHTML += `
+    <form id="question4">
+        <label> Please input your numbers seperate by commas [Eg: 1,21,100] (Spaces after comma sould be ok) </label><br>
+        <textarea rows="2" cols="50" id="numbers" onclick="()"> 1, 2, 3, 4 </textarea><br><br>
+        <label> Please input the sign of the operator that you want to perform </label><br>
+        <input type"text" id="operator" value="+" /><br><br>
+        <label> Your tota</label>
+        <button id="buttonNo2" onclick="question_2()"> Submit </button>
+        <button id="reset" onclick="reset()"> Reset </button> <br>
+    </form>
+    `;
+question4Div.innerHTML += `<div id="requestQuestion_2"></div>`;
+question4Div.innerHTML += `<hr>`;
 
 
