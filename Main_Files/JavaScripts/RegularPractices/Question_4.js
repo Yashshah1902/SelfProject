@@ -90,7 +90,7 @@ function clearOperator(){
 }
 
 function resetq4(){
-    const defaultNumbers = `1, 2, 3, 4`;
+    const defaultNumbers = [1, 2, 3, 4];
     const defaultOperator = `+`;
     document.getElementById('sentenceArea').value = defaultNumbers;
     document.getElementById('wordArea').value= defaultOperator;
